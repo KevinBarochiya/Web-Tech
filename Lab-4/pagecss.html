@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML for Beginners</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    .pic{
+        display: flex;
+    }
+    .pic img{
+        height: 220px;
+        width: 340px;
+        margin-top: 30px;
+        border-radius: 5px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 0px;
+      flex: 1;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .header p {
+      font-size: 1.1em;
+      color: #555;
+      text-align: left;
+      padding-right: 40px;
+    }
+
+    .lessons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .lesson {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      transition: box-shadow 0.3s;
+    }
+
+    .lesson:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .lesson img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    .lesson-content {
+      flex: 1;
+    }
+
+    .lesson-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .lesson-description {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .lesson-meta {
+      font-size: 0.8em;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    .start-button {
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      padding: 10px;
+      margin-left: 0;
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    .start-button:hover {
+      background-color: #0056b3;
+    }
+    .start2{ 
+        width: 100px;
+        margin: 0;
+        padding: 5px;
+        margin-left: 450px;
+        text-align: center;
+        background-color: #fff;
+        color: #000;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1em;
+        transition: background-color 0.3s;
+
+    }
+    .NC{
+        display: flex;
+        font-size: small;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+    .N{
+        background-color: #e7e5e5;
+        border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="pic">
+        <div class="header">
+        <h1>HTML for Beginners</h1>
+        <p>Dive into the fundamentals of web development with our beginner-friendly HTML course. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio, libero placeat ut necessitatibus at voluptatibus quas optio repudiandae soluta harum consequuntur omnis unde mollitia aliquam saepe cum quos sapiente!</p>
+        <a href="#" class="start-button">Start Series</a>
+        </div>
+        <img src="download3.jpg" alt="Lesson Thumbnail">
+    </div>
+    <div class="N">
+        <div class="NC">
+            <p>11 Lessons| 2h 5m | Beginner  <a href="#" class="start2">Complete Series</a></p>
+        </div>
+    </div>
+
+    <div class="lessons">
+      <div class="lesson">
+        <img src="download.jpeg" alt="Lesson Thumbnail">
+        <div class="lesson-content">
+          <h2 class="lesson-title">What is HTML and Why Learn It</h2>
+          <p class="lesson-description">In this lesson, we will learn what HTML is and why we need to know about it.</p>
+          <p class="lesson-meta">Nov 03, 2023</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <img src="download.jpeg" alt="Lesson Thumbnail">
+        <div class="lesson-content">
+          <h2 class="lesson-title">HTML Document Structure</h2>
+          <p class="lesson-description">Learn about the basic structure of HTML documents.</p>
+          <p class="lesson-meta">Nov 03, 2023</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <img src="download.jpeg" alt="Lesson Thumbnail">
+        <div class="lesson-content">
+          <h2 class="lesson-title">Text Elements</h2>
+          <p class="lesson-description">A look at the elements used to markup text content in HTML.</p>
+          <p class="lesson-meta">Nov 03, 2023</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <img src="download.jpeg" alt="Lesson Thumbnail">
+        <div class="lesson-content">
+          <h2 class="lesson-title">Anchor Elements</h2>
+          <p class="lesson-description">We will look at a key element in what makes the web: hyperlinks.</p>
+          <p class="lesson-meta">Nov 03, 2023</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <img src="download.jpeg" alt="Lesson Thumbnail">
+        <div class="lesson-content">
+          <h2 class="lesson-title">List and Nav Elements</h2>
+          <p class="lesson-description">Learn how to display content in a list and create navigation for web pages.</p>
+          <p class="lesson-meta">Nov 03, 2023</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <img src="download.jpeg" alt="Lesson Thumbnail">
+        <div class="lesson-content">
+          <h2 class="lesson-title">Image Element</h2>
+          <p class="lesson-description">Learn about how to display images on your web pages.</p>
+          <p class="lesson-meta">Nov 03, 2023</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <img src="download.jpeg" alt="Lesson Thumbnail">
+        <div class="lesson-content">
+          <h2 class="lesson-title">Additional Semantic Elements</h2>
+          <p class="lesson-description">Provide better structure to web pages using semantic elements from HTML5.</p>
+          <p class="lesson-meta">Nov 03, 2023</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <img src="download.jpeg" alt="Lesson Thumbnail">
+        <div class="lesson-content">
+          <h2 class="lesson-title">Intro to Forms</h2>
+          <p class="lesson-description">Foundational knowledge of forms on the web.</p>
+          <p class="lesson-meta">Nov 03, 2023</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

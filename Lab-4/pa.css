@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  .pic{
+      display: flex;
+  }
+  .pic img{
+      height: 220px;
+      width: 340px;
+      margin-top: 30px;
+      border-radius: 5px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 0;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 0px;
+    flex: 1;
+  }
+
+  .header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .header p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: left;
+    padding-right: 40px;
+  }
+
+  .lessons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .lesson {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    transition: box-shadow 0.3s;
+  }
+
+  .lesson:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .lesson img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+
+  .lesson-content {
+    flex: 1;
+  }
+
+  .lesson-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 0 10px;
+  }
+
+  .lesson-description {
+    font-size: 0.9em;
+    color: #555;
+  }
+
+  .lesson-meta {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 10px;
+  }
+
+  .start-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    margin-left: 0;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+
+  .start-button:hover {
+    background-color: #0056b3;
+  }
+  .start2{ 
+      width: 100px;
+      margin: 0;
+      padding: 5px;
+      margin-left: 450px;
+      text-align: center;
+      background-color: #fff;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background-color 0.3s;
+
+  }
+  .NC{
+      display: flex;
+      font-size: small;
+      margin-bottom: 20px;
+      margin-left: 10px;
+  }
+  .N{
+      background-color: #e7e5e5;
+      border-radius: 5px;
+  }

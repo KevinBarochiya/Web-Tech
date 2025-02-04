@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Table and Faculty Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header,
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+
+        .student-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .student-info p {
+            margin: 5px 0;
+            color: #444;
+        }
+
+        /* Timetable Styles */
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        .timetable th,
+        .timetable td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .timetable th {
+            background-color: #db4d34;
+            color: white;
+            font-weight: 600;
+        }
+
+        .timetable tr:nth-child(even) {
+            background-color: #f5f5fa;
+        }
+
+        .timetable td:first-child {
+            background-color: #db4d34;
+            color: white;
+            font-weight: 600;
+        }
+
+        .lunch {
+            background-color: #fff3cd !important;
+            color: #856404 !important;
+            font-style: italic;
+        }
+
+        .split-cell {
+            border-bottom: 1px solid #dee2e6;
+            padding: 8px 0;
+        }
+
+        .split-cell:last-child {
+            border-bottom: none;
+        }
+
+        .course-code {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .room {
+            color: #6c757d;
+            font-size: 13px;
+        }
+
+        .teacher {
+            color: #495057;
+            font-size: 13px;
+        }
+
+        /* Faculty Table Styles (similar to timetable) */
+        .faculty-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .faculty-table th,
+        .faculty-table td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .faculty-table th {
+            background-color: #db4d34;
+            color: white;
+            font-weight: 600;
+        }
+
+        .faculty-table tr:nth-child(even) {
+            background-color: #f5f5fa;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+
+            .timetable,
+            .faculty-table {
+                font-size: 12px;
+            }
+
+            .timetable th,
+            .timetable td,
+            .faculty-table th,
+            .faculty-table td {
+                padding: 8px 4px;
+            }
+        }
+
+        .footer-info {
+            margin-top: 20px;
+            text-align: center;
+            color: #444;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Timetable Section -->
+        <div class="student-info">
+            <p>Kevin Barochiya</p>
+            <p>22BIT162</p>
+        </div>
+        <div class="header">
+            <h2>ICT22</h2>
+            <h3>Div 3 - Sem 6 - Time Table</h3>
+        </div>
+        <table class="timetable">
+            <tr>
+                <th>Day</th>
+                <th>08:00 - 09.00</th>
+                <th>09:00 - 10.00</th>
+                <th>10:00 - 11.00</th>
+                <th>11:00 - 12.00</th>
+                <th>12:00 - 13.00</th>
+                <th>13:00 - 14.00</th>
+                <th>14:00 - 15.00</th>
+                <th>15:00 - 16.00</th>
+                <th>16:00 - 17.00</th>
+                <th>17:00 - 18.00</th>
+                <th>18:00 - 19.00</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td></td>
+                <td>
+                    <div class="course-code">H7H8H9 (20IC304T)</div>
+                    <div class="room">F-504</div>
+                    <div class="teacher">AMK-L</div>
+                </td>
+                <td>
+                    <div class="course-code">H7H8H9 (20IC305T)</div>
+                    <div class="room">F-504</div>
+                    <div class="teacher">PST-L</div>
+                </td>
+                <td colspan="2">
+                    <div class="split-cell">
+                        <div class="course-code">H7H8H9 (20IC405P)</div>
+                        <div class="room">F-204</div>
+                        <div class="teacher">RIVY-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H7H8H9 (20IC313P)</div>
+                        <div class="room">F-214</div>
+                        <div class="teacher">JRS-P</div>
+                    </div>
+                </td>
+                <td class="lunch">Lunch Break</td>
+                <td colspan="2">
+                    <div class="split-cell">
+                        <div class="course-code">H7 (20IC306P)</div>
+                        <div class="room">E 112-113</div>
+                        <div class="teacher">ANAN-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H8 (20IC306P)</div>
+                        <div class="room">E 112-113</div>
+                        <div class="teacher">PRAB-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H9 (20IC306P)</div>
+                        <div class="room">E 112-113</div>
+                        <div class="teacher">DESA-P</div>
+                    </div>
+                </td>
+                <td></td>
+                <td colspan="2">Open Elective</td>
+            </tr>
+            <td>Tuesday</td>
+            <td></td>
+            <td>
+                <div class="split-cell">
+                    <div class="course-code">H7H8H9 (20IC313T)</div>
+                    <div class="room">F-404</div>
+                    <div class="teacher">JRS-L</div>
+                </div>
+                <div class="split-cell">
+                    <div class="course-code">H7H8H9 (20IC405T)</div>
+                    <div class="room">E-202</div>
+                    <div class="teacher">RABH-L</div>
+                </div>
+            </td>
+            <td>
+                <div class="course-code">H7H8H9 (20IC306T)</div>
+                <div class="room">E-202</div>
+                <div class="teacher">DESA-L</div>
+            </td>
+            <td>
+                <div class="course-code">H7H8H9 (20IC305T)</div>
+                <div class="room">F-503</div>
+                <div class="teacher">PST-L</div>
+            </td>
+            <td>
+                <div class="course-code">H7H8H9 (22CDC006)</div>
+                <div class="room">F-503</div>
+                <div class="teacher">CDCT-L</div>
+            </td>
+            <td class="lunch">Lunch Break</td>
+            <td>
+                <div class="course-code">H7H8H9 (23IC301T)</div>
+                <div class="room">F-503</div>
+                <div class="teacher">SHIV-L</div>
+            </td>
+            <td>
+                <div class="course-code">H7H8H9 (20IC316T)</div>
+                <div class="room">F-503</div>
+                <div class="teacher">MSK-L</div>
+            </td>
+            <td>Open Elective</td>
+            <td>
+                <div class="course-code">H7H8H9 (22CDC006)</div>
+                <div class="room">C201/1</div>
+                <div class="teacher">CDCT-L</div>
+            </td>
+            <td></td>
+            </tr>
+            <tr>
+                <td>
+                    Wednesday
+                </td>
+                <td></td>
+                <td>
+                    <div class="course-code">H7H8H9 (20IC305T)</div>
+                    <div class="room">F-504</div>
+                    <div class="teacher">PST-L</div>
+                </td>
+                <td>
+                    <div class="course-code">H7H8H9 (20IC316T)</div>
+                    <div class="room">F-504</div>
+                    <div class="teacher">MSK-L</div>
+                </td>
+                <td>
+                    <div class="course-code">H7H8H9 (20IC306T)</div>
+                    <div class="room">E-201</div>
+                    <div class="teacher">DESA-L</div>
+                </td>
+                <td>
+                    <div class="course-code">H7H8H9 (20IC304T)</div>
+                    <div class="room">F-503</div>
+                    <div class="teacher">AMK-L</div>
+                </td>
+                <td class="lunch"> Lunch Break </td>
+                <td colspan="2">
+                    <div class="split-cell">
+                        <div class="course-code">H7 (20IC304P)</div>
+                        <div class="room">F-204</div>
+                        <div class="teacher">GUTH-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H8 (20IC301P)</div>
+                        <div class="room">E-214</div>
+                        <div class="teacher">SHIV-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H9 (20IC301P)</div>
+                        <div class="room">E-214</div>
+                        <div class="teacher">KAGA-P</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="course-code">H7H8H9 (20IC306T)</div>
+                    <div class="room">E-202</div>
+                    <div class="teacher">DESA-L</div>
+                </td>
+                <td>
+                    <div class="course-code">H7H8H9 (20IF201T)</div>
+                    <div class="room">OE ROOM</div>
+                    <div class="teacher">ICTV2-L</div>
+                </td>
+                <td colspan="2">
+                    <div class="split-cell">
+                        <div class="course-code">H7H8H9 (20IC405T)</div>
+                        <div class="room">E-202</div>
+                        <div class="teacher">RABH-L</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H7H8H9 (20HS301P)</div>
+                        <div class="room">E-201</div>
+                        <div class="teacher">JRS-L</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td></td>
+                <td colspan="2">
+                    <div class="course-code">H7H8H9 (20HS301P)</div>
+                    <div class="room">F-503</div>
+                    <div class="teacher">CHSH-P</div>
+                </td>
+                <td colspan="2">
+                    <div class="split-cell">
+                        <div class="course-code">H7 (23IC301P)</div>
+                        <div class="room">E-214</div>
+                        <div class="teacher">AYMA-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H8 (20IC316P)</div>
+                        <div class="room">E-212</div>
+                        <div class="teacher">MSK-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H9 (20IC304P)</div>
+                        <div class="room">F-204</div>
+                        <div class="teacher">AMK-P</div>
+                    </div>
+                </td>
+                <td class="lunch">Lunch Break</td>
+                <td colspan="2">
+                    <div class="split-cell">
+                        <div class="course-code">H7 (20IC305P)</div>
+                        <div class="room">E 112-113</div>
+                        <div class="teacher">ABJO-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H8 (20IC305P)</div>
+                        <div class="room">E 112-113</div>
+                        <div class="teacher">PST-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H9 (20IC305P)</div>
+                        <div class="room">E 112-113</div>
+                        <div class="teacher">SOPA-P</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="course-code">H7H8H9 (20OC30T)</div>
+                    <div class="room">E-201</div>
+                    <div class="teacher">AMK-L</div>
+                </td>
+                <td>
+                    <div class="course-code">H7H8H9 (20IF201T)</div>
+                    <div class="room">OE Room</div>
+                    <div class="teacher">ICTV2-L</div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td></td>
+                <td>
+                    <div class="course-code">H7H8H9 (22CDC006)</div>
+                    <div class="room">F-503</div>
+                    <div class="teacher">CDCT-L</div>
+                </td>
+                <td>
+                    <div class="course-code">H7H8H9 (23IC301T)</div>
+                    <div class="room">E-202</div>
+                    <div class="teacher">SHIV-L</div>
+                </td>
+                <td colspan="2">
+                    <div class="split-cell">
+                        <div class="course-code">H7 (20IC316P)</div>
+                        <div class="room">E-212</div>
+                        <div class="teacher">PWS-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H8 (20IC304P)</div>
+                        <div class="room">F-204</div>
+                        <div class="teacher">AMK-P</div>
+                    </div>
+                    <div class="split-cell">
+                        <div class="course-code">H9 (20IC305P)</div>
+                        <div class="room">E-212</div>
+                        <div class="teacher">MORO-P</div>
+                    </div>
+                </td>
+                <td class="lunch">Lunch Break</td>
+                <td colspan="2">
+                    <div class="course-code">H7H8H9 (20IF201P)</div>
+                    <div class="room">OE Room</div>
+                    <div class="teacher">ICTV1-P</div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- Additional rows for Tuesday, Wednesday, Thursday, Friday go here -->
+        </table>
+
+        <!-- Faculty & Lab Details Section -->
+        <h1>Faculty and Lab Details</h1>
+        <table class="faculty-table">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Subject Code</th>
+                    <th>Subject</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ABJO</td>
+                    <td>Abhishekh Joshi</td>
+                    <td>20HS301P</td>
+                    <td>Communication Skills III</td>
+                </tr>
+                <tr>
+                    <td>AMK</td>
+                    <td>Amit M Kumar</td>
+                    <td>20IC304P</td>
+                    <td>Embedded Systems Lab</td>
+                </tr>
+                <tr>
+                    <td>ANAN</td>
+                    <td>Anand Singh</td>
+                    <td>20IC304T</td>
+                    <td>Embedded Systems</td>
+                </tr>
+                <tr>
+                    <td>AYMA</td>
+                    <td>Ayushi Mathur</td>
+                    <td>20IC305P</td>
+                    <td>AI Systems Lab</td>
+                </tr>
+                <tr>
+                    <td>CDCT</td>
+                    <td>CD Cell Trainer</td>
+                    <td>20IC305T</td>
+                    <td>AI Systems</td>
+                </tr>
+                <tr>
+                    <td>CHSH</td>
+                    <td>Charu Sharma</td>
+                    <td>20IC306P</td>
+                    <td>Computer Communication and Networking Lab</td>
+                </tr>
+                <tr>
+                    <td>DESA</td>
+                    <td>Deepak Sahu</td>
+                    <td>20IC306T</td>
+                    <td>Computer Communication and Networking</td>
+                </tr>
+                <tr>
+                    <td>GUTH</td>
+                    <td>Gunjan Thakur</td>
+                    <td>20IC313P</td>
+                    <td>Machine Learning Lab</td>
+                </tr>
+                <tr>
+                    <td>ICTV1</td>
+                    <td>ICT Visiting Faculty 1</td>
+                    <td>20IC313T</td>
+                    <td>Machine Learning</td>
+                </tr>
+                <tr>
+                    <td>ICTV2</td>
+                    <td>ICT Visiting Faculty 2</td>
+                    <td>20IC316P</td>
+                    <td>Cloud Architecture and Services Lab</td>
+                </tr>
+                <tr>
+                    <td>JRS</td>
+                    <td>Jigar Shah</td>
+                    <td>20IC316T</td>
+                    <td>Cloud Architecture and Services</td>
+                </tr>
+                <tr>
+                    <td>KAGA</td>
+                    <td>Kamal Garg</td>
+                    <td>20IC405P</td>
+                    <td>Deep and Reinforcement Learning Lab</td>
+                </tr>
+                <tr>
+                    <td>MORO</td>
+                    <td>Mohendra Roy (ICT)</td>
+                    <td>20IC405T</td>
+                    <td>Deep and Reinforcement Learning</td>
+                </tr>
+                <tr>
+                    <td>MSK</td>
+                    <td>Manish Kumar</td>
+                    <td>20IF201P</td>
+                    <td>Industry 4.0 Lab</td>
+                </tr>
+                <tr>
+                    <td>PRAB</td>
+                    <td>Pradip Barik</td>
+                    <td>20IF201T</td>
+                    <td>Industry 4.0</td>
+                </tr>
+                <tr>
+                    <td>PST</td>
+                    <td>Parth Thakar</td>
+                    <td>22CDC006</td>
+                    <td>CDC Training</td>
+                </tr>
+                <tr>
+                    <td>PWS</td>
+                    <td>Pawan Sharma</td>
+                    <td>23IC301P</td>
+                    <td>WEB TECHNOLOGY LAB</td>
+                </tr>
+                <tr>
+                    <td>RABH</td>
+                    <td>Rashmi Bhattad</td>
+                    <td>23IC301T</td>
+                    <td>Web Technology</td>
+                </tr>
+                <tr>
+                    <td>RIVY</td>
+                    <td>Ritesh Vyas</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SHIV</td>
+                    <td>Shivangi Mehta</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SOPA</td>
+                    <td>Soumyashree Panda</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer-info">
+            <p>Dr. Nitin Singh Rajput - Timetable Coordinator</p>
+            <p>Dr. Paawan Sharma - HoD</p>
+            <p>Prof. Dhaval Pujara - Director (School of Technology)</p>
+        </div>
+    </div>
+</body>
+</html>

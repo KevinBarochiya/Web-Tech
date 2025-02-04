@@ -120,8 +120,8 @@ nav h1 {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    aspect-ratio: 16/9; /* Maintains consistent aspect ratio */
-    max-height: 60vh; /* Maximum height relative to viewport */
+    aspect-ratio: 16/9; 
+    max-height: 60vh; 
 }
 
 .slider {
@@ -143,8 +143,8 @@ nav h1 {
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image covers area without distortion */
-    object-position: center; /* Centers the image */
+    object-fit: cover; 
+    object-position: center; 
 }
 
 .slide-caption {
@@ -157,107 +157,29 @@ nav h1 {
     color: white;
     transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
-    font-size: clamp(0.8rem, 2vw, 1rem); /* Responsive font size */
+    font-size: clamp(0.8rem, 2vw, 1rem); 
 }
 
 .slide-caption h3 {
     margin: 0 0 5px 0;
-    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive heading size */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); 
 }
 
 .slide:hover .slide-caption {
     transform: translateY(0);
 }
-
-.slider-controls {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 10;
-}
-
-.slider-dot {
-    width: clamp(8px, 1.5vw, 12px); /* Responsive dot size */
-    height: clamp(8px, 1.5vw, 12px);
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: clamp(30px, 4vw, 40px); /* Responsive arrow size */
-    height: clamp(30px, 4vw, 40px);
-    background: rgba(0,0,0,0.5);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: clamp(14px, 2vw, 20px);
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .slider-container {
-        margin: 0.5rem auto;
-        max-height: 50vh;
-    }
-
-    .slide-caption {
-        padding: 10px;
-    }
-
-    .slider-arrow {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    .slider-arrow.left {
-        left: 10px;
-    }
-
-    .slider-arrow.right {
-        right: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .slider-container {
-        max-height: 40vh;
-    }
-
-    .slide-caption {
-        position: static;
-        transform: none;
-        background: var(--primary-color);
-    }
-}
-
-/* Ensure main content remains responsive */
 main {
     margin-top: 80px;
-    padding: 0; /* Removed padding for full-width slider */
+    padding: 0; 
     min-height: calc(100vh - 80px - 400px);
 }
 
 .content {
-    padding: 2rem 5%; /* Moved padding to content container */
+    padding: 2rem 5%; 
     line-height: 1.6;
     color: var(--text-dark);
 }
 
-/* Enhanced Footer Styles */
 footer {
     background: var(--footer-bg);
     color: var(--footer-text);

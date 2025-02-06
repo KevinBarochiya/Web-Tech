@@ -1,121 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML for Beginners</title>
   <style>
     body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-  }
-  .pic{
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .pic {
       display: flex;
-  }
-  .pic img{
+    }
+
+    .pic img {
       height: 220px;
       width: 340px;
       margin-top: 30px;
       border-radius: 5px;
-  }
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
-    padding-top: 0;
-  }
+    }
 
-  .header {
-    text-align: center;
-    margin-bottom: 0px;
-    flex: 1;
-  }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+      padding-top: 0;
+    }
 
-  .header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    text-align: left;
-  }
+    .header {
+      text-align: center;
+      margin-bottom: 0px;
+      flex: 1;
+    }
 
-  .header p {
-    font-size: 1.1em;
-    color: #555;
-    text-align: left;
-    padding-right: 40px;
-  }
+    .header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-align: left;
+    }
 
-  .lessons {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+    .header p {
+      font-size: 1.1em;
+      color: #555;
+      text-align: justify;
+      padding-right: 40px;
+    }
 
-  .lesson {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    transition: box-shadow 0.3s;
-  }
+    .lessons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-  .lesson:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    .lesson {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      transition: box-shadow 0.3s;
+    }
 
-  .lesson img {
-    width: 120px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 2px;
-  }
+    .lesson:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  .lesson-content {
-    flex: 1;
-  }
+    .lesson img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
 
-  .lesson-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 0 0 10px;
-  }
+    .lesson-content {
+      flex: 1;
+    }
 
-  .lesson-description {
-    font-size: 0.9em;
-    color: #555;
-  }
+    .lesson-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
 
-  .lesson-meta {
-    font-size: 0.8em;
-    color: #888;
-    margin-top: 10px;
-  }
+    .lesson-description {
+      font-size: 0.9em;
+      color: #555;
+    }
 
-  .start-button {
-    display: block;
-    width: 200px;
-    margin: 20px auto;
-    padding: 10px;
-    margin-left: 0;
-    text-align: center;
-    background-color: #eb6e63;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1em;
-    transition: background-color 0.3s;
-  }
+    .lesson-meta {
+      font-size: 0.8em;
+      color: #888;
+      margin-top: 10px;
+    }
 
-  .start-button:hover {
-    background-color: #0056b3;
-  }
-  .start2{ 
+    .start-button {
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      padding: 10px;
+      margin-left: 0;
+      text-align: center;
+      background-color: #eb6e63;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    .start-button:hover {
+      background-color: #0056b3;
+    }
+
+    .start2 {
       width: 100px;
       margin: 0;
       padding: 5px;
@@ -128,33 +133,38 @@
       font-size: 1em;
       transition: background-color 0.3s;
 
-  }
-  .NC{
+    }
+
+    .NC {
       display: flex;
       font-size: small;
       margin-bottom: 20px;
       margin-left: 10px;
-  }
-  .N{
+    }
+
+    .N {
       background-color: #e7e5e5;
       border-radius: 5px;
-  }
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="pic">
-        <div class="header">
+      <div class="header">
         <h1>HTML for Beginners</h1>
-        <p>Dive into the fundamentals of web development with our beginner-friendly HTML course. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio, libero placeat ut necessitatibus at voluptatibus quas optio repudiandae soluta harum consequuntur omnis unde mollitia aliquam saepe cum quos sapiente!</p>
+        <p>Dive into the fundamentals of web development with our beginner-friendly HTML course. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Reprehenderit odio, libero placeat ut necessitatibus at voluptatibus quas
+          optio repudiandae soluta harum consequuntur omnis unde mollitia aliquam saepe cum quos sapiente!</p>
         <a href="#" class="start-button">Start Series</a>
-        </div>
-        <img src="download3.jpg" alt="Lesson Thumbnail">
+      </div>
+      <img src="download3.jpg" alt="Lesson Thumbnail">
     </div>
     <div class="N">
-        <div class="NC">
-            <p>11 Lessons| 2h 5m | Beginner  <a href="#" class="start2">Complete Series</a></p>
-        </div>
+      <div class="NC">
+        <p>11 Lessons| 2h 5m | Beginner <a href="#" class="start2">Complete Series</a></p>
+      </div>
     </div>
 
     <div class="lessons">
@@ -225,4 +235,5 @@
     </div>
   </div>
 </body>
+
 </html>

@@ -94,7 +94,11 @@ nav h1 {
     transform: translateY(10px);
     transition: all 0.3s ease;
 }
-
+.KB img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
 .nav-item:hover .dropdown {
     display: block;
     transform: translateY(0);

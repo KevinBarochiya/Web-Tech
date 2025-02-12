@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            height: auto;
+        }
+        .header{
+            background-color: #f4f4f4;
+            padding: 4px;
+            margin-left: 230px;
+            margin-right: 230px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        p input{
+            padding: 0px;
+            margin: 0px 0;
+            width: 5%;
+        }
+        button {
+            background: #2990fe;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 15%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #01346b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header"> <h2>Student Feedback Form</h2> </div>
+        
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="abc@gmail.com" id="email" name="email" required>
+
+            <label for="name">Name:</label>
+            <input type="text" placeholder="ABC" id="name" name="name" required>
+            
+            <label for="text">Roll No:</label>
+            <input type="text" id="email" placeholder="22BIT001" name="email" required>
+
+            <label for="course">Subject</label>
+            <select id="course" name="course">
+                <option value="5">AI</option>
+                <option value="4">Web Tech</option>
+                <option value="3">Embedded system</option>
+                <option value="2">CCN</option>
+                <option value="1">Cloud Computing</option>
+            </select> 
+            <label for="course">How effective was the instructor in delivering the course material?</label>
+                <p><input type="radio" name="a" id="">Excellent</p>
+                <p><input type="radio" name="a" id="">Very Good</p>
+                <p><input type="radio" name="a" id="">Good</p>
+                <p><input type="radio" name="a" id="">Average</p>
+                <p><input type="radio" name="a" id="">Poor</p>
+            <label for="course">Were the course materials (slides, notes, videos) helpful and well-structured?</label>
+                <p><input type="radio" name="b" id="">Excellent</p>
+                <p><input type="radio" name="b" id="">Very Good</p>
+                <p><input type="radio" name="b" id="">Good</p>
+                <p><input type="radio" name="b" id="">Average</p>
+                <p><input type="radio" name="b" id="">Poor</p>
+            <label for="course">Was the course content relevant and up-to-date?</label>
+                <p><input type="radio" name="c" id="">Excellent</p>
+                <p><input type="radio" name="c" id="">Very Good</p>
+                <p><input type="radio" name="c" id="">Good</p>
+                <p><input type="radio" name="c" id="">Average</p>
+                <p><input type="radio" name="c" id="">Poor</p>
+            <label for="course">How would you rate the level of student engagement and interaction in this course?</label>
+                <p><input type="radio" name="d" id="">Excellent</p>
+                <p><input type="radio" name="d" id="">Very Good</p>
+                <p><input type="radio" name="d" id="">Good</p>
+                <p><input type="radio" name="d" id="">Average</p>
+                <p><input type="radio" name="d" id="">Poor</p>
+            <label>Which Qualitys you learn from this course ? </label>
+                <p><input type="checkbox" > Time Management</p>
+                <p><input type="checkbox" > Logic Building</p>
+                <p><input type="checkbox" > Problem Solving</p>
+                <p><input type="checkbox" > Designing </p>
+                <p><input type="checkbox" > Creativity </p>
+            <label for="comments">Additional Feedback:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

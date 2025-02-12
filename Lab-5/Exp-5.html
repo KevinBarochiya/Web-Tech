@@ -1,123 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Feedback Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
-        .container {
-            background: white;
+
+        .form-container {
+            width: 40%;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 800px;
-            height: auto;
-        }
-        .header{
-            background-color: #f4f4f4;
-            padding: 4px;
-            margin-left: 230px;
-            margin-right: 230px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            margin-top: 20px;
-        }
-        h2 {
-            text-align: center;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background-color: #f9f9f9;
         }
-        p input{
-            padding: 0px;
-            margin: 0px 0;
-            width: 5%;
+
+        .form-group {
+            margin-bottom: 15px;
         }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        select {
+            height: 35px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
         button {
-            background: #2990fe;
+            background-color: rgb(40, 66, 161);
             color: white;
+            padding: 10px 20px;
             border: none;
-            padding: 10px;
-            width: 15%;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
         }
+
         button:hover {
-            background: #01346b;
+            background-color: darkblue;
+        }
+
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 30px;
+            color: #ddd;
+            cursor: pointer;
+            padding: 0 2px;
+        }
+
+        .star-rating label:before {
+            content: '★';
+        }
+
+        .star-rating input:checked~label {
+            color: #ffd700;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover~label {
+            color: #ffd700;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-
-        <div class="header"> <h2>Student Feedback Form</h2> </div>
-        
+    <div class="form-container">
+        <h2>Course Feedback Form</h2>
         <form>
-            <label for="email">Email:</label>
-            <input type="email" placeholder="abc@gmail.com" id="email" name="email" required>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Kevin" id="name" name="name" required>
+            </div>
 
-            <label for="name">Name:</label>
-            <input type="text" placeholder="ABC" id="name" name="name" required>
-            
-            <label for="text">Roll No:</label>
-            <input type="text" id="email" placeholder="22BIT001" name="email" required>
+            <div class="form-group">
+                <label for="rollno">Roll Number:</label>
+                <input type="text" placeholder="22BIT001" id="rollno" name="rollno" required>
+            </div>
 
-            <label for="course">Subject</label>
-            <select id="course" name="course">
-                <option value="5">AI</option>
-                <option value="4">Web Tech</option>
-                <option value="3">Embedded system</option>
-                <option value="2">CCN</option>
-                <option value="1">Cloud Computing</option>
-            </select> 
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="abc@gmail.com" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Choose a course</option>
+                    <option value="5">AI</option>
+                    <option value="4">Web Tech</option>
+                    <option value="3">Embedded system</option>
+                    <option value="2">CCN</option>
+                    <option value="1">Cloud Computing</option>
+                </select>
+            </div>
             <label for="course">How effective was the instructor in delivering the course material?</label>
-                <p><input type="radio" name="a" id="">Excellent</p>
-                <p><input type="radio" name="a" id="">Very Good</p>
-                <p><input type="radio" name="a" id="">Good</p>
-                <p><input type="radio" name="a" id="">Average</p>
-                <p><input type="radio" name="a" id="">Poor</p>
+            <p><input type="radio" name="a" id="">Excellent</p>
+            <p><input type="radio" name="a" id="">Very Good</p>
+            <p><input type="radio" name="a" id="">Good</p>
+            <p><input type="radio" name="a" id="">Average</p>
+            <p><input type="radio" name="a" id="">Poor</p>
             <label for="course">Were the course materials (slides, notes, videos) helpful and well-structured?</label>
-                <p><input type="radio" name="b" id="">Excellent</p>
-                <p><input type="radio" name="b" id="">Very Good</p>
-                <p><input type="radio" name="b" id="">Good</p>
-                <p><input type="radio" name="b" id="">Average</p>
-                <p><input type="radio" name="b" id="">Poor</p>
+            <p><input type="radio" name="b" id="">Excellent</p>
+            <p><input type="radio" name="b" id="">Very Good</p>
+            <p><input type="radio" name="b" id="">Good</p>
+            <p><input type="radio" name="b" id="">Average</p>
+            <p><input type="radio" name="b" id="">Poor</p>
             <label for="course">Was the course content relevant and up-to-date?</label>
-                <p><input type="radio" name="c" id="">Excellent</p>
-                <p><input type="radio" name="c" id="">Very Good</p>
-                <p><input type="radio" name="c" id="">Good</p>
-                <p><input type="radio" name="c" id="">Average</p>
-                <p><input type="radio" name="c" id="">Poor</p>
-            <label for="course">How would you rate the level of student engagement and interaction in this course?</label>
-                <p><input type="radio" name="d" id="">Excellent</p>
-                <p><input type="radio" name="d" id="">Very Good</p>
-                <p><input type="radio" name="d" id="">Good</p>
-                <p><input type="radio" name="d" id="">Average</p>
-                <p><input type="radio" name="d" id="">Poor</p>
+            <p><input type="radio" name="c" id="">Excellent</p>
+            <p><input type="radio" name="c" id="">Very Good</p>
+            <p><input type="radio" name="c" id="">Good</p>
+            <p><input type="radio" name="c" id="">Average</p>
+            <p><input type="radio" name="c" id="">Poor</p>
+            <label for="course">How would you rate the level of student engagement and interaction in this
+                course?</label>
+            <p><input type="radio" name="d" id="">Excellent</p>
+            <p><input type="radio" name="d" id="">Very Good</p>
+            <p><input type="radio" name="d" id="">Good</p>
+            <p><input type="radio" name="d" id="">Average</p>
+            <p><input type="radio" name="d" id="">Poor</p>
             <label>Which Qualitys you learn from this course ? </label>
-                <p><input type="checkbox" > Time Management</p>
-                <p><input type="checkbox" > Logic Building</p>
-                <p><input type="checkbox" > Problem Solving</p>
-                <p><input type="checkbox" > Designing </p>
-                <p><input type="checkbox" > Creativity </p>
-            <label for="comments">Additional Feedback:</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
-            <button type="submit">Submit</button>
+            <p><input type="checkbox"> Time Management</p>
+            <p><input type="checkbox"> Logic Building</p>
+            <p><input type="checkbox"> Problem Solving</p>
+            <p><input type="checkbox"> Designing </p>
+            <p><input type="checkbox"> Creativity </p>
+
+
+
+            <div class="form-group">
+                <label for="review">Your Review:</label>
+                <textarea id="review" name="review" required></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
         </form>
     </div>
 </body>
+
 </html>

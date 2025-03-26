@@ -1,0 +1,31 @@
+.header, .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #1a1a1a;
+    color: aliceblue;
+}
+.main{
+    display: flex;
+    height: 80vh;
+}
+.navigation{
+    width: 15vw;
+    padding: 20px;
+    background-color: grey;
+}
+.navigation p{
+    font-size: 24px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.m-content{
+    width: 85vw;
+    padding: 20px;
+}
+.m-content p{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+}

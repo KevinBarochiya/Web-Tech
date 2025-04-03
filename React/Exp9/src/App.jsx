@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);  // Initial count
-  const [step, setStep] = useState(1);     // Step size
+  const [count, setCount] = useState(0); 
+  const [step, setStep] = useState(1);
 
   const increment = () => setCount(count + step);
   const decrement = () => setCount(count - step);
@@ -44,8 +44,7 @@ const Counter = () => {
 
         <button
           onClick={reset}
-          className="w-full bg-gray-400 text-white px-4 py-3 rounded-lg hover:bg-gray-500 transition"
-        >
+          className="w-full bg-gray-400 text-white px-4 py-3 rounded-lg hover:bg-gray-500 transition">
           Reset
         </button>
       </div>

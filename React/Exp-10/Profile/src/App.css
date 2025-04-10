@@ -141,23 +141,4 @@ button:hover {
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  h1 {
-    position: static;
-    margin-bottom: 1rem;
-  }
-  
-  .profile-form {
-    position: static;
-    width: 100%;
-  }
-  
-  .profiles-container {
-    margin-top: 1rem;
-  }
-}
+

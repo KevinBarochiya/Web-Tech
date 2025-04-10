@@ -39,7 +39,6 @@ function App() {
 
   return (
     <div className="container">
-      
       <form onSubmit={handleSubmit} className="profile-form">
         <h2>Create New Profile</h2>
         <div className="form-group">
@@ -116,5 +115,4 @@ function App() {
     </div>
   )
 }
-
 export default App
